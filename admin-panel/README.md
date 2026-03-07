@@ -17,6 +17,8 @@ Next.js admin panel for **SUPER_ADMIN** users. Manage users, colleges, communiti
    ```
    Open [http://localhost:3000](http://localhost:3000).
 
+
+
 ## Login
 
 - Only accounts with type **SUPER_ADMIN** can sign in.
