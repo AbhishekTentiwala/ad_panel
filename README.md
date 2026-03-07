@@ -1,1 +1,0 @@
-# ad_panel

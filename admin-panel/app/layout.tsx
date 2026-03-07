@@ -1,0 +1,20 @@
+import type { Metadata } from "next";
+import { AuthProvider } from "@/store/AuthContext";
+import "./globals.css";
+
+export const metadata: Metadata = {
+  title: "Campus Assist — Admin",
+  description: "Super admin panel for Campus Assist",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
+  return (
+    <html lang="en">
+      <body>
+        <AuthProvider>{children}</AuthProvider>
+      </body>
+    </html>
+  );
+}
