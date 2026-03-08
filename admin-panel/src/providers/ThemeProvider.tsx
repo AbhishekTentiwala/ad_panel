@@ -21,15 +21,19 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     applyTheme('dark');
   }, []);
 
-  const applyTheme = () => {
-    document.documentElement.classList.add('dark');
+  const applyTheme = (theme: Theme) => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
   };
 
   const setTheme = (newTheme: Theme) => {
     // Always enforce dark mode, even if a different theme is requested.
     void newTheme;
     setThemeState('dark');
-    applyTheme();
+    applyTheme('dark');
   };
 
   const toggleTheme = () => {
